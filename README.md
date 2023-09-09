@@ -41,14 +41,17 @@ This app provides an [example config](https://github.com/SeqSEE/SCP-4-Pinning/bl
 ### findMissing
 
 `npm run findMissing`
-This script will go over the IPFS CIDs of SCP-4 tokens using the headers provided by the SCP API and generate a JSON report of the tokens which have IPFS CIDs with data that could not be retrieved.
+
+This script will go over the IPFS CIDs of SCP-4 tokens using the headers provided by the SCP API and generate a JSON report of the tokens which have IPFS CIDs with data that could not be retrieved locally.
 
 ### pinCurrentTokens
 
 `npm run pinCurrentTokens`
+
 This script will go over the IPFS CIDs of SCP-4 tokens using the headers provided by the SCP API, the IPFS CID will be used to copy the data and re-pin locally if it can be found on the IPFS network.
 
 ### processBlock
 
 `npm run processBlock -- "blockhash"`
+
 This script accepts a command line argument of a blockhash, if SCP-4 token mints are included in the block, the IPFS CID will be used to copy the data and re-pin locally.
