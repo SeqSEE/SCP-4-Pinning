@@ -4,7 +4,10 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "findMissing": "node ./dist/findMissing.js",
+    "pinCurrentTokens": "node ./dist/pinCurrentTokens.js",
+    "processBlock": "node ./dist/processBlock.js"
   },
   "author": "Cryptech Services",
   "license": "MIT",
