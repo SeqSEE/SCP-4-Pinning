@@ -23,11 +23,11 @@ The node needs to be setup to respond to RPC calls.
 
 ##### Windows
 
-- `blocknotify=node C:\path\to\SCP4-Repin\dist\processBlock.js %s`
+- `blocknotify=node C:\path\to\SCP-4-Pinning\dist\processBlock.js %s`
 
 ##### \*nix
 
-- `blocknotify=node /path/to/SCP4-Repin/dist/processBlock.js %s`
+- `blocknotify=node /path/to/SCP-4-Pinning/dist/processBlock.js %s`
 
 ### SCP-4 Pinning
 
