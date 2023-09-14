@@ -2,8 +2,9 @@ import fs from 'fs';
 import path from 'path';
 import dotenv from 'dotenv';
 import axios from 'axios';
-import {APIProvider} from './APIProvider';
 import {fileURLToPath} from 'url';
+import {APIProvider} from './APIProvider.js';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 dotenv.config({path: path.join(__dirname, '..', '.env')});
@@ -14,6 +15,7 @@ export const findMissing = async () => {
   const missing = new Map<string, Map<string, string>>();
   let obj: any = {};
   const exists = new Map<string, boolean>();
+  console.log(headers.length);
   for (const header of headers) {
     const missingIPFS = new Map<string, string>();
     const {contract, collectionName, totalTXs} = header;
@@ -69,3 +71,4 @@ export const findMissing = async () => {
   console.log(JSON.stringify(obj));
   fs.writeFileSync('missing.json', JSON.stringify(obj));
 };
+findMissing();

@@ -2,9 +2,10 @@ import axios from 'axios';
 import path from 'path';
 import dotenv from 'dotenv';
 import {fileTypeFromBuffer} from 'file-type';
-import {APIProvider} from './APIProvider';
-import {addPin} from './addPin.js';
 import {fileURLToPath} from 'url';
+import {APIProvider} from './APIProvider.js';
+import {addPin} from './addPin.js';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 dotenv.config({path: path.join(__dirname, '..', '.env')});
@@ -86,3 +87,4 @@ export const pinCurrentTokens = async () => {
 
   process.exit(0);
 };
+pinCurrentTokens();

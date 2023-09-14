@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {Provider} from './interface/Provider';
+import {Provider} from './interface/Provider.js';
 const Bytes32 = /^[a-fA-F0-9]{64}$/;
 
 export class APIProvider implements Provider {
