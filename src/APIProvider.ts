@@ -9,7 +9,9 @@ export class APIProvider implements Provider {
     let headers: any[] = [];
     const url = `${this.baseURL}/getallcollectionheaders`;
     try {
-      const response = await axios.get(url);
+      const response = await axios.get(url, {
+        timeout: 300000,
+      });
       headers = response.data ? response.data : [];
     } catch (e) {
       console.log('Failed to get all collection headers');
@@ -26,7 +28,9 @@ export class APIProvider implements Provider {
         );
       }
       const url = `${this.baseURL}/getcollection/${contract}`;
-      const response = await axios.get(url);
+      const response = await axios.get(url, {
+        timeout: 300000,
+      });
       nfts = response.data.nfts ? response.data.nfts : [];
     } catch (e) {
       console.log(`Failed to get collection ${contract}`);
